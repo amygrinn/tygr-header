@@ -1,6 +1,6 @@
-# Tygr Logo
+# Tygr Header
 
-[Demo](https://tygr.info/download/@tygr/logo/lib/demo)
+[Demo](https://tygr.info/download/@tygr/header/lib/demo)
 
 This is a react component packaged for three environments: node, browser, and standalone.
 
@@ -15,23 +15,23 @@ This is a react component packaged for three environments: node, browser, and st
 Installation:
 
 ```cmd
-npm i --save-dev @tygr/logo
+npm i --save-dev @tygr/header
 ```
 
 Usage (jsx):
 
 ```jsx
-import Logo from '@tygr/logo';
+import Header from '@tygr/header';
 
 // Import styles. Make sure there is a style loader specified in your
 // webpack config
-import '@tygr/logo/lib/tygr-logo.min.css';
+import '@tygr/header/lib/tygr-header.min.css';
 
 export default function MyComponent() {
   return (
     <div>
-      <h1>Logo usage example</h1>
-      <Logo />
+      <h1>Header usage example</h1>
+      <Header />
     </div>
   );
 }
@@ -41,7 +41,7 @@ export default function MyComponent() {
 
 Usage:
 
-When included via script tag, the component is exposed as a window library named 'TygrLogo'
+When included via script tag, the component is exposed as a window library named 'TygrHeader'
 
 ```html
 <html>
@@ -50,17 +50,17 @@ When included via script tag, the component is exposed as a window library named
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <script src="https://tygr.info/download/@tygr/logo/lib/tygr-logo.min.js"></script>
+    <script src="https://tygr.info/download/@tygr/header/lib/tygr-header.min.js"></script>
     <link
       rel="stylesheet"
-      href="https://tygr.info/download/@tygr/logo/lib/tygr-logo.min.css"
+      href="https://tygr.info/download/@tygr/header/lib/tygr-header.min.css"
     />
   </head>
   <body>
     <div id="app"></div>
 
     <script type="text/babel">
-      ReactDOM.render(<TygrLogo />, document.getElementById('app'));
+      ReactDOM.render(<TygrHeader />, document.getElementById('app'));
     </script>
   </body>
 </html>
@@ -71,17 +71,17 @@ When included via script tag, the component is exposed as a window library named
 Installation:
 
 ```cmd
-npm i --save-dev @tygr/logo
+npm i --save-dev @tygr/header
 ```
 
 Usage:
 
 ```js
-import Logo from '@tygr/logo/lib/standalone';
+import header from '@tygr/header/lib/standalone';
 
 const el = document.getElementById('app');
 
-Logo.mount(el);
+Header.mount(el);
 ```
 
 You should not use the standalone version if you have multiple react components in your project.
@@ -96,5 +96,5 @@ Make sure to reassign the sass variables before importing the sass file:
 $accent-1: white;
 $accent-2: yellow;
 
-@import '@tygr/logo/lib/main';
+@import '@tygr/header/lib/main';
 ```

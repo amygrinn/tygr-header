@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Logo from '../lib';
-import '../lib/tygr-logo.min.css';
+import Header from '../lib';
+import '../lib/tygr-header.min.css';
 
-ReactDOM.render(<Logo />, document.getElementById('app'));
+ReactDOM.render(<Header />, document.getElementById('app'));

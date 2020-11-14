@@ -1,4 +1,4 @@
-import Logo from '../lib/standalone';
-import '../lib/tygr-logo.min.css';
+import Header from '../lib/standalone';
+import '../lib/tygr-header.min.css';
 
-Logo.mount(document.getElementById('app'));
+Header.mount(document.getElementById('app'));

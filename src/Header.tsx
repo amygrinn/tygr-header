@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function TG() {
+export default function Header() {
   return (
-    <div className="tygr-logo">
+    <div className="tygr-header">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         height="150px"

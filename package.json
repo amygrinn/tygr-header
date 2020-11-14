@@ -1,7 +1,7 @@
 {
-  "name": "@tygr/logo",
-  "version": "1.1.2",
-  "description": "Logo for tygr",
+  "name": "@tygr/header",
+  "version": "0.0.0",
+  "description": "Header for tygr",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -52,7 +52,7 @@
     "clean": "rimraf lib",
     "ts": "tsc",
     "ts:w": "npm run ts -- -w",
-    "sass:compile": "sass -I node_modules src/styles/main.scss lib/tygr-logo.min.css",
+    "sass:compile": "sass -I node_modules src/styles/main.scss lib/tygr-header.min.css",
     "sass:compile:w": "npm run sass:compile -- --watch",
     "sass:copy": "copyfiles -u 2 src/styles/**/* lib",
     "sass:copy:w": "nodemon -e * -x \"npm run sass:copy\" -w src/styles",
@@ -80,7 +80,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com/tylergrinn/tygr-logo.git"
+    "url": "git@github.com/tylergrinn/tygr-header.git"
   },
   "keywords": [
     "react",

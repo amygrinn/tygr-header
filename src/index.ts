@@ -1,3 +1,3 @@
-import Logo from './Logo';
+import Header from './Header';
 
-export default Logo;
+export default Header;

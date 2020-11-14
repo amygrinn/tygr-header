@@ -90,6 +90,7 @@
   "author": "Tyler Grinn",
   "license": "ISC",
   "dependencies": {
+    "@tygr/logo": "^1.1.2",
     "react": "16"
   },
   "devDependencies": {

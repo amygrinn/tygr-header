@@ -2,20 +2,22 @@
 
 [Demo](https://tygr.info/download/@tygr/header/lib/demo)
 
+[Forking Guide](docs/forking.md)
+
 This is a react component packaged for three environments: node, browser, and standalone.
 
-- Node is reccommended. It does not package any dependencies into the code and will rely on you to install react and react-dom separately.
+- Node is reccommended. If you are already using react in the project, this library simply exports a react component function you can use directly in jsx.
 
 - Browser is for fast prototyping in the browser. You can add this component via a script tag. The react and react-dom script tags must be placed before the component script.
 
-- Standalone is for projects that do not use react in any other component. It exposes the `mount` function, which takes an HTML element, and react and react-dom are built in and don't need to be installed separatey.
+- Standalone is for projects that do not use react. It exposes the `mount` function, which takes an HTML element.
 
 ## Node
 
 Installation:
 
 ```cmd
-npm i --save-dev @tygr/header
+npm i --save @tygr/header
 ```
 
 Usage (jsx):
@@ -71,17 +73,52 @@ When included via script tag, the component is exposed as a window library named
 Installation:
 
 ```cmd
-npm i --save-dev @tygr/header
+npm i --save @tygr/header
 ```
 
 Usage:
 
-```js
-import header from '@tygr/header/lib/standalone';
+```jsx
 
-const el = document.getElementById('app');
+// Vanilla JS
+import Header from '@tygr/header/lib/standalone';
+
+const el = document.getElementById('tygr-header');
 
 Header.mount(el);
+
+// Vue
+<template>
+<div>
+  <div ref="tygr-header"></div>
+</div>
+</template>
+
+<script>
+import Header from '@tygr/header/lib/standalone';
+
+export default {
+  mounted() {
+    Header.mount(this.$refs['tygr-header']);
+  },
+};
+</script>
+
+// Angular Typescript
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import Header from '@tygr/header/lib/standalone';
+
+@Component({
+  selector: 'app-root',
+  template: '<div><div #tygr-header></div></div>',
+})
+export class HeaderComponent  {
+  @ViewChild('tygr-header') el: ElementRef;
+
+  ngAfterViewInit() {
+    Header.mount(this.el.nativeElement);
+  }
+}
 ```
 
 You should not use the standalone version if you have multiple react components in your project.
@@ -90,7 +127,7 @@ You should not use the standalone version if you have multiple react components 
 
 Sass variables can be overridden if you accept responsibility for transpiling it into css. You can see an example of this setup in the `webpack.config.demo.js` configuration named `sass`.
 
-Make sure to reassign the sass variables before importing the sass file:
+Make sure to reassign any sass variables before importing the `main.scss` file:
 
 ```scss
 $accent-1: white;

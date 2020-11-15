@@ -19,7 +19,7 @@ before_deploy:
 
 script:
   - npm run quality:check
-  - npm run build
+  - NODE_ENV=production npm run build
 
 deploy:
   - on:
@@ -30,7 +30,7 @@ deploy:
     email: tylergrinn@gmail.com
     skip_cleanup: true
     api_token:
-      secure: f6DTO2ata9F3vEl3pgL0duLtlPwHVwviVzvDgoAkQJxIIxYms4DcJIab9aCkldJxuFHcg4t9FO82nxZdlDX+Mo0qTwzEXFgoZMSxPoIxEnfPRpTOWFC3IanUUOkEXFcctyAq0cWG3YGSe8aQPfTcRhMA7bspC7L+ac76/Tv2HNkd39S96f7/JIq54vu6SHXUUzntzGxG9xNGg8BsF/gcpRC119UNaSadM9hQFPAh+vg+kU36dPnrWuynOPfAn0z5Exx72Aut9g7urAJuzTkY/USVs8v46bTRZjulr1QjrrkvEpTBllysV6H8pAHQVkl2qnbJW5UqTtzOH2tYgZx1KvX+F7WqQ+VJKpaKxjfVRLNCJ5KEuRbzK2ZvIb480ugXhlHfHoyLMWwGFRPx9niZqNDmp8aTVgtiV3uIItqH5Mj1pxh8s/GbdQe7BiduCQIw34HJiVtqtAQ0DbFQoblRKqMhozzo6e1+YYrEkC8xwInkj46rU94YMSYN8v80nn4D84WfY5eYHf7UekcJptN9xV/Aqrr3Yuru/cbwvr/bKir4+5NWC7agaAy9To1Op6at+N4J/Z1OxjcrtMhju36XgylKNAo2cv9Bhoy2XyEmjYnH08Z9ayBc/0rPttlV8vhmhXTSVzcYmT2znOQbTHazc3D84meGmp3nGc6WE/ppHA8=
+      secure: Bbdl5K/5zS4MPAJ9d9vHWfthH5ET3jhhq5uE91+R90SdmxMawRgVUXEO9p2b+XxX6k7FRO4NtVJvzRtyLC+/H9YRgFg9G5C9L1tPXvcKbxfcJcfj9dKyBeVQw/qHEpJ2aFfCiMcM7mLnTCYcxu+j8+g32ARkd4mcvkhDrsouFtAC3OJykFRN6Nzs3ts6JdyJpWWpRQoNanxq7YHety62XFuqvXKLzpB4G1v3oPr947s+Q4d/r8vN5i92oBpcFyAoHxufXoNJCukqrI4olS3bluQlTOLE8B8yuJlcwEOyZEWgCZXnn+AN/fJ2PxR0jDuzywis/4hbgoAiDCqrYjpsqI/4tzSYhgrDC/UiiftEhr06seazl2TIQsAdFeP4DqwDjJ8JgVBQAhmoYthGZB6FbLjyZ/JsLZsBpYVyx62WB/svn9qLZCmj+dvi5hmmiTTD+PNbrh4JxPFMDZ6TnxAdMbDYGt8KxEuvK9aLogw5C4UiBB4PbSV+Bmg3VCO3a2g5OnisTwCaiKSEpHEvNbM6aCcJHLPLe4wqkFMMP6EGoY+K4EPaL9im6gxks170xQPzGKFtRBC5jHdvzahXndWiUbDRafkUDSRjlWu1wkRURGtVUHKnd7npi0jEA2V2FVmKXV4DIWvCjY11rDxcbcEOXYXcbwqWt67SceYhMcqRU+A=
   - on:
       branch: main
       tags: true

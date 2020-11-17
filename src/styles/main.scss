@@ -1,7 +1,5 @@
-$accent-1: blue;
-$accent-2: magenta;
-
-@import '@tygr/logo/lib/main';
+@use 'variables';
+@use '@tygr/logo/sass';
 
 .tygr-header {
   display: flex;

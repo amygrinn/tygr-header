@@ -1,6 +1,4 @@
 /lib
-dist
+/dist
 node_modules
-debug.log
-.env
 .vscode

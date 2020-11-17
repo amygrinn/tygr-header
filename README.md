@@ -52,10 +52,10 @@ When included via script tag, the component is exposed as a window library named
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <script src="https://tygr.info/download/@tygr/header/lib/tygr-header.min.js"></script>
+    <script src="https://tylergrinn.github.io/tygr-header/lib/tygr-header.min.js"></script>
     <link
       rel="stylesheet"
-      href="https://tygr.info/download/@tygr/header/lib/tygr-header.min.css"
+      href="https://tylergrinn.github.io/tygr-header/lib/tygr-header.min.css"
     />
   </head>
   <body>
@@ -133,5 +133,5 @@ Make sure to reassign any sass variables before importing the `main.scss` file:
 $accent-1: white;
 $accent-2: yellow;
 
-@import '@tygr/header/lib/main';
+@import '@tygr/header/sass';
 ```

@@ -1,6 +1,6 @@
 # Tygr Header
 
-[Demo](https://tygr.info/download/@tygr/header/lib/demo)
+[Demo](https://tylergrinn.github.io/tygr-header)
 
 [Forking Guide](https://github.com/tylergrinn/tygr-logo/blob/main/docs/forking.md)
 
